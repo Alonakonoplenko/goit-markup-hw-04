@@ -8,8 +8,12 @@
     --iris-color: #4D5AE5;
     --ocean-color: #404BBF;
     --cloud-color:#F4F4FD;
+    --light-slate-color: #8E8F99;
+    --green-color:#31D0AA;
     --typical-lh: 1.5;
     --row-gap: 48px
+    --grad: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
+    --grad:linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
 }
 
 body {
@@ -93,7 +97,8 @@ img {
 }
 
 .header {
-    border: 1px solid var(--cornflower-color);
+    border-bottom: 1px solid var(--cornflower-color);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .nav {
@@ -167,7 +172,6 @@ address {
 }
 
 .address-item {
-    
 }
 
 .address-link {
@@ -211,10 +215,49 @@ address {
     width: 264px;
     }
 
+.footer-social-title{
+    
+}
+.footer-social {
+    display: flex;
+    gap: 24px;
+}
+    
+.footer-social-item {
+    width: 40px;
+    height: 40px;
+}
+    
+.footer-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    
+}
+    
+.footer-social-icon {
+    fill: var(--cloud-color);
+}
+    
+.footer-social-link:hover,
+.footer-social-link:focus {
+    background-color: var(--green-color);
+}
+
 /* For index */
 
 .hero {
+    max-width: 1440px;
+    margin: auto;
+    margin: auto;
     background-color: var(--navy-blue-color);
+    background-image: var(--grad), url(../images/img-hw-4/hero-img.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding-top: 188px;
     padding-bottom: 188px; 
 }
@@ -265,11 +308,23 @@ address {
     display: flex;
     list-style-type: none;
     gap: 24px;
-
 }
 
 .about-item {
     width: 264px;
+}
+
+.about-item-icon-backg {
+    background: var(--cloud-color);
+    min-width: 264px;
+    min-height: 112px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.about-item-icon {
 }
 
 .about-title {
@@ -334,8 +389,12 @@ address {
 
 .team-item {
     display: block;
-    height: 380px;
+    height: 428px;
     background: var(--white-color);
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.07),
+    0px 1px 1px rgba(46, 47, 66, 0.14),
+    0px 2px 1px rgba(46, 47, 66, 0.07);
+        border-radius: 0px 0px 4px 4px;
     width: calc((100% - 72px) / 4);
 }
 
@@ -343,7 +402,7 @@ address {
 } 
 
 .team-card {
-    height: 120px;
+    height: 168px;
     width: 264px;
     text-align: center;
     border: 1px solid var(--cornflower-color);
@@ -361,7 +420,90 @@ address {
     line-height: var(--typical-lh);
     letter-spacing: 0.02em;
     color: var(--slate-color);
+    margin-bottom: 8px;
     }
+
+.social {
+    display: flex;
+    gap: 24px;
+}
+
+.social-item {
+    width: 40px;
+    height: 40px;
+}
+.social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;    
+    background-color: var(--iris-color);
+}
+
+.social-icon {
+    fill: var(--cloud-color);
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: var(--ocean-color);
+    }
+
+.customers-section{
+    padding-top: 130px;
+    padding-bottom: 120px;
+}
+
+.customers-title {
+    color: var(--navy-blue-color);
+    font-size: 36px;
+    line-height: 1.11;
+    margin-left: auto;
+    margin-right: auto;
+    width: 183px;
+}
+
+.customers-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 72px;
+    gap: 24px;
+}
+
+.customers-item {
+    width: 168px;
+    height: 88px;
+    
+}
+
+.customers-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--light-slate-color);
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    color: var(--light-slate-color);
+}
+
+.customers-icon {
+  color: currentColor;  
+}
+
+.customers-icon:hover,
+.customers-link:focus {
+    color: var(--ocean-color);
+}
+
+.customers-link:hover,
+.customers-link:focus {
+    border-color: var(--ocean-color);
+    color: var(--ocean-color);
+}
 
 /* For portfolio */
 
@@ -434,8 +576,17 @@ address {
     padding-bottom: 32px;
     border: 1px solid var(--cornflower-color);
     border-top: none;
-
 }
+
+.projects-item:hover,
+.projects-item:focus{
+    cursor: pointer;
+    box-shadow:
+        0px 1px 6px rgba(46, 47, 66, 0.08),
+        0px 1px 1px rgba(46, 47, 66, 0.16),
+        0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
 .projects-img {
     
 }
