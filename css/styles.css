@@ -427,8 +427,6 @@ address {
 
 .team-card {
     padding: 32px 16px;
-    height: 168px;
-    width: 264px;
     text-align: center;
     border: 1px solid var(--cornflower-color);
 }
